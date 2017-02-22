@@ -1,0 +1,2 @@
+export PYTHONPATH=$PYTHONPATH:.
+python model_genie/model_builder.py models/alkaloids1.xml MNXR73258:Q8ZXA3 MNXR159:Q88JU5 MNXR222:O82865 MNXR59597:A2A1A0
