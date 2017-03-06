@@ -28,18 +28,18 @@ def get_document(params):
     react_to_uniprot = {}
 
     for param in params:
-        ids = param.split(':')
-        data = _get_reaction(ids[0])
-        _parse(data, nodes, rels)
+        terms = param.split(':')
+        data = _get_reaction(terms[0])
+        _parse(data, nodes, rels, terms[2] if len(terms) > 2 else None)
 
-        if len(ids) > 1:
-            react_to_uniprot[model_utils.get_id(ids[0])] = ids[1]
+        if len(terms) > 1:
+            react_to_uniprot[model_utils.get_id(terms[0])] = terms[1]
 
     for cid, chemical in nodes['c'].iteritems():
         model_utils.add_species(model, cid, chemical)
 
     for cid, reaction in nodes['r'].iteritems():
-        model_utils.add_reaction(model, cid, reaction)
+        model_utils.add_reaction(model, cid, reaction, reaction['reversible'])
 
     for rel in rels:
         model_utils.add_species_ref(model, str(rel[0]), str(rel[2]),
@@ -61,7 +61,7 @@ def _get_reaction(reac_id):
     return biochem4j.run_query(qry, parameters)
 
 
-def _parse(data, nodes, rels):
+def _parse(data, nodes, rels, flag):
     '''Parses data.'''
     if len(data['errors']) > 0:
         raise ValueError(str(data['errors']))
@@ -76,7 +76,9 @@ def _parse(data, nodes, rels):
         for idx, meta_row in enumerate(zip(datum['meta'], datum['row'])):
             if meta_row[0]['type'] == 'node':
                 cid = model_utils.get_id(meta_row[1]['id'])
-                nodes[columns[idx]][cid] = meta_row[1]
+                node_data = meta_row[1]
+                node_data['reversible'] = (flag == 'rev')
+                nodes[columns[idx]][cid] = node_data
 
                 if from_node is None:
                     from_node = cid
@@ -84,6 +86,8 @@ def _parse(data, nodes, rels):
                     to_node = cid
 
             elif meta_row[0]['type'] == 'relationship':
+                meta_row[1]['stoichiometry'] = meta_row[1]['stoichiometry'] * \
+                    (-1.0 if flag == 'flip' else 1.0)
                 rel = meta_row[1]
 
         if rel is not None:
