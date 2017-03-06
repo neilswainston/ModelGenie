@@ -29,7 +29,9 @@ _SPECIES_TO_IGNORE = [
     'http://identifiers.org/chebi/CHEBI:24636',  # proton
     'http://identifiers.org/chebi/CHEBI:28938',  # ammonium
     'http://identifiers.org/chebi/CHEBI:33019',  # diphosphate(3-)
+    'http://identifiers.org/chebi/CHEBI:43474',  # hydrogenphosphate
     'http://identifiers.org/chebi/CHEBI:30616',  # ATP(4-)
+    'http://identifiers.org/chebi/CHEBI:456216',  # ADP(3-)
     'http://identifiers.org/chebi/CHEBI:456215',  # AMP(2-)
     'http://identifiers.org/chebi/CHEBI:57287',  # coenzyme A(4-)
     'http://identifiers.org/chebi/CHEBI:57540',  # NAD(1-)
