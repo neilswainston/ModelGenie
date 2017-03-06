@@ -132,13 +132,15 @@ def _get_formula(model, reactants, products, enzyme):
 def _get_terms(model, participants, prefix):
     ''''Get list of tuples of (id, stoichiometry, parameter_id,
     sbo_term).'''
-    terms = [[participant.getSpecies(),
-              participant.getStoichiometry(),
+    valid_ppt = [ppt for ppt in participants
+                 if not model.getSpecies(ppt.getSpecies()).getConstant()]
+
+    terms = [[ppt.getSpecies(),
+              ppt.getStoichiometry(),
               (prefix + str(i + 1), model_utils.SBO_TERMS[model_utils.CONC]),
               ('KM_' + prefix + str(i + 1),
                model_utils.SBO_TERMS[model_utils.K_M])]
-             for i, participant in enumerate(participants)
-             if not model.getSpecies(participant.getSpecies()).getConstant()]
+             for i, ppt in enumerate(valid_ppt)]
 
     return terms
 
