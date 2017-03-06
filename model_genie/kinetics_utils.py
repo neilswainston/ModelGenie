@@ -22,12 +22,19 @@ _SBO_TERM_DEFAULT = {model_utils.SBO_TERMS[model_utils.SIMPLE_CHEM]: 1e-4,
                      model_utils.SBO_TERMS[model_utils.KCAT_REV]: 10,
                      model_utils.SBO_TERMS[model_utils.K_M]: 1e-4}
 
-_SPECIES_TO_IGNORE = ['http://identifiers.org/chebi/CHEBI:15377',
-                      'http://identifiers.org/chebi/CHEBI:15378',
-                      'http://identifiers.org/chebi/CHEBI:16526',
-                      'http://identifiers.org/chebi/CHEBI:24636',
-                      'http://identifiers.org/chebi/CHEBI:28938',
-                      'http://identifiers.org/chebi/CHEBI:33019']
+_SPECIES_TO_IGNORE = [
+    'http://identifiers.org/chebi/CHEBI:15377',  # water
+    'http://identifiers.org/chebi/CHEBI:15378',  # hydron
+    'http://identifiers.org/chebi/CHEBI:16526',  # carbon dioxide
+    'http://identifiers.org/chebi/CHEBI:24636',  # proton
+    'http://identifiers.org/chebi/CHEBI:28938',  # ammonium
+    'http://identifiers.org/chebi/CHEBI:33019',  # diphosphate(3-)
+    'http://identifiers.org/chebi/CHEBI:30616',  # ATP(4-)
+    'http://identifiers.org/chebi/CHEBI:456215',  # AMP(2-)
+    'http://identifiers.org/chebi/CHEBI:57287',  # coenzyme A(4-)
+    'http://identifiers.org/chebi/CHEBI:57540',  # NAD(1-)
+    'http://identifiers.org/chebi/CHEBI:57945',  # NADH(2-)
+]
 
 _FORMULA_TO_ID = {}
 

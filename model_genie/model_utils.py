@@ -228,8 +228,11 @@ def _add_identifiers(properties, sbase):
         for val in str(value).split(';'):
             url = 'http://identifiers.org/' + key + '/' + val
 
-            if urllib.urlopen(url).getcode() == 200:
-                _add_cv_term(url, sbase)
+            try:
+                if urllib.urlopen(url).getcode() == 200:
+                    _add_cv_term(url, sbase)
+            except IOError, err:
+                print err
 
 
 def _add_cv_term(url, sbase):
