@@ -155,9 +155,10 @@ def _get_numer_terms(terms):
 def _get_denom_terms(terms):
     '''Returns denominator terms in the form
     (((S1/KM_S1)^0 + (S1/KM_S1)^1)) * ((S2/KM_S2)^0 + (S2/KM_S2)^1)).'''
-    lst = [' + '.join(['( ( ' + term[2][0] + ' / ' + term[3][0] + ' ) ^ ' +
+    lst = [' + '.join(['1'] +
+                      ['( ( ' + term[2][0] + ' / ' + term[3][0] + ' ) ^ ' +
                        str(x) + ' )'
-                       for x in range(int(term[1]) + 1)])
+                       for x in range(1, int(term[1]) + 1)])
            for term in terms]
     return '( ' + ' ) * ( '.join(lst) + ' )'
 
