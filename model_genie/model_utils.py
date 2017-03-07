@@ -207,6 +207,8 @@ def add_modifier(model, react_id, uniprot_id):
     for ref in reaction.getListOfModifiers():
         ref.setSBOTerm(SBO_TERMS[ENZYME])
 
+    reaction.setName(spec.getName())
+
 
 def _init_sbase(sbase, cid, data, sbo):
     '''Initialises an sbase.'''
