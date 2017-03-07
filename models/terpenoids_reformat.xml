@@ -182,7 +182,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0.00061" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57288">
@@ -290,7 +290,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57286" sboTerm="SBO:0000247" id="_CHEBI_57286" name="acetoacetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57286" sboTerm="SBO:0000247" id="_CHEBI_57286" name="acetoacetyl-CoA(4-)" compartment="c" initialConcentration="2.2e-05" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57286">
@@ -467,7 +467,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q8LKJ2"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR14942" sboTerm="SBO:0000176" id="_MNXR14942" reversible="false">
+      <reaction metaid="_meta_MNXR14942" sboTerm="SBO:0000176" id="_MNXR14942" name="Acetyl-CoA acetyltransferase/HMG-CoA reductase" reversible="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR14942">
@@ -482,21 +482,21 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="1"/>
-          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="1"/>
-          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57945" stoichiometry="2"/>
-          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_43074" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57287" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57540" stoichiometry="2"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_36464" stoichiometry="1"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57287" stoichiometry="1"/>
-          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57540" stoichiometry="2"/>
-          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_36464" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57945" stoichiometry="2"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_43074" stoichiometry="1"/>
         </listOfProducts>
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR69766" sboTerm="SBO:0000176" id="_MNXR69766" reversible="false">
+      <reaction metaid="_meta_MNXR69766" sboTerm="SBO:0000176" id="_MNXR69766" name="Phosphomevalonate kinase" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR69766">
@@ -523,7 +523,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD52"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR341" sboTerm="SBO:0000176" id="_MNXR341" reversible="false">
+      <reaction metaid="_meta_MNXR341" sboTerm="SBO:0000176" id="_MNXR341" name="Acetyl-CoA acetyltransferase/HMG-CoA reductase" reversible="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR341">
@@ -540,17 +540,17 @@
           </rdf:RDF>
         </annotation>
         <listOfReactants>
-          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57288" stoichiometry="2"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57287" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57286" stoichiometry="1"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57287" stoichiometry="1"/>
-          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57286" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57288" stoichiometry="2"/>
         </listOfProducts>
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR69289" sboTerm="SBO:0000176" id="_MNXR69289" reversible="true">
+      <reaction metaid="_meta_MNXR69289" sboTerm="SBO:0000176" id="_MNXR69289" name="Isopentenyl-diphosphate Delta-isomerase" reversible="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR69289">
@@ -577,7 +577,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q46822"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR3507" sboTerm="SBO:0000176" id="_MNXR3507" reversible="false">
+      <reaction metaid="_meta_MNXR3507" sboTerm="SBO:0000176" id="_MNXR3507" name="Mevalonate kinase" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR3507">
@@ -605,7 +605,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR68753" sboTerm="SBO:0000176" id="_MNXR68753" reversible="false">
+      <reaction metaid="_meta_MNXR68753" sboTerm="SBO:0000176" id="_MNXR68753" name="Diphosphomevalonate decarboxylase" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR68753">
@@ -635,7 +635,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD53"/>
         </listOfModifiers>
       </reaction>
-      <reaction metaid="_meta_MNXR2982" sboTerm="SBO:0000176" id="_MNXR2982" reversible="false">
+      <reaction metaid="_meta_MNXR2982" sboTerm="SBO:0000176" id="_MNXR2982" name="Hydroxymethylglutaryl-CoA synthase" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR2982">
@@ -665,9 +665,7 @@
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD71"/>
         </listOfModifiers>
       </reaction>
-      
-      
-      <reaction metaid="_meta_R02013" sboTerm="SBO:0000176" id="_R02013" reversible="false">
+      <reaction metaid="_meta_R02013" sboTerm="SBO:0000176" id="_R02013" name="4S-limonene synthase" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_R02013">

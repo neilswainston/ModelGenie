@@ -1,6 +1,545 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level2/version5" level="2" version="5">
   <model>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="_cc005897d2ef4df9932a30ee0b9e1ab6" name="Convenience (irreversible): 2 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KM_S2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_7af6473a5b4a401aa860439f5dc05a86" name="Convenience (reversible): 3 reactants, 2 products">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_rev </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> S3 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S3 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_P2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> kcat_for </ci>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> S3 </ci>
+                      <ci> KM_S3 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kcat_rev </ci>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> P2 </ci>
+                      <ci> KM_P2 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S1 </ci>
+                          <ci> KM_S1 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S2 </ci>
+                          <ci> KM_S2 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S2 </ci>
+                          <ci> KM_S2 </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S3 </ci>
+                          <ci> KM_S3 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> P1 </ci>
+                          <ci> KM_P1 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> P1 </ci>
+                          <ci> KM_P1 </ci>
+                        </apply>
+                        <cn type="integer"> 2 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> P2 </ci>
+                          <ci> KM_P2 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_4747dcd5b07749d8b071c16cb12092dd" name="Convenience (reversible): 2 reactants, 1 products">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_rev </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_P1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> kcat_for </ci>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kcat_rev </ci>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S1 </ci>
+                          <ci> KM_S1 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <power/>
+                        <apply>
+                          <divide/>
+                          <ci> S2 </ci>
+                          <ci> KM_S2 </ci>
+                        </apply>
+                        <cn type="integer"> 1 </cn>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_131a1f3946bd4eda90460ea8ebc087f9" name="Convenience (reversible): 1 reactants, 1 products">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_rev </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_P1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> kcat_for </ci>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kcat_rev </ci>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_df4c1dcb029e466aa17d7afe96270a13" name="Convenience (irreversible): 1 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KM_S1 </ci>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
     <listOfUnitDefinitions>
       <unitDefinition id="per_sec" name="per_sec">
         <listOfUnits>
@@ -25,7 +564,7 @@
       <compartment id="c" size="1e-15"/>
     </listOfCompartments>
     <listOfSpecies>
-      <species metaid="_meta_CHEBI_57540" sboTerm="SBO:0000247" id="_CHEBI_57540" name="NAD(1-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57540" sboTerm="SBO:0000247" id="_CHEBI_57540" name="NAD(1-)" compartment="c" initialConcentration="0.0026" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57540">
@@ -40,7 +579,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_16526" sboTerm="SBO:0000247" id="_CHEBI_16526" name="Carbon dioxide" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_16526" sboTerm="SBO:0000247" id="_CHEBI_16526" name="Carbon dioxide" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_16526">
@@ -95,7 +634,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57945" sboTerm="SBO:0000247" id="_CHEBI_57945" name="NADH(2-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57945" sboTerm="SBO:0000247" id="_CHEBI_57945" name="NADH(2-)" compartment="c" initialConcentration="8.3e-05" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57945">
@@ -137,7 +676,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_24636" sboTerm="SBO:0000247" id="_CHEBI_24636" name="proton" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_24636" sboTerm="SBO:0000247" id="_CHEBI_24636" name="proton" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_24636">
@@ -153,7 +692,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_33019" sboTerm="SBO:0000247" id="_CHEBI_33019" name="diphosphate(3-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_33019" sboTerm="SBO:0000247" id="_CHEBI_33019" name="diphosphate(3-)" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_33019">
@@ -182,7 +721,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0.00061" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57288">
@@ -212,7 +751,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_15377" sboTerm="SBO:0000247" id="_CHEBI_15377" name="Hydroxycobalamin" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_15377" sboTerm="SBO:0000247" id="_CHEBI_15377" name="water" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_15377">
@@ -233,7 +772,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_30616" sboTerm="SBO:0000247" id="_CHEBI_30616" name="ATP(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_30616" sboTerm="SBO:0000247" id="_CHEBI_30616" name="ATP(4-)" compartment="c" initialConcentration="0.0096" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_30616">
@@ -247,7 +786,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_43474" sboTerm="SBO:0000247" id="_CHEBI_43474" name="hydrogenphosphate" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_43474" sboTerm="SBO:0000247" id="_CHEBI_43474" name="hydrogenphosphate" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_43474">
@@ -261,7 +800,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_456216" sboTerm="SBO:0000247" id="_CHEBI_456216" name="ADP(3-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_456216" sboTerm="SBO:0000247" id="_CHEBI_456216" name="ADP(3-)" compartment="c" initialConcentration="0.00056" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_456216">
@@ -275,7 +814,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57287" sboTerm="SBO:0000247" id="_CHEBI_57287" name="coenzyme A(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57287" sboTerm="SBO:0000247" id="_CHEBI_57287" name="coenzyme A(4-)" compartment="c" initialConcentration="0.0014" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57287">
@@ -290,7 +829,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57286" sboTerm="SBO:0000247" id="_CHEBI_57286" name="acetoacetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57286" sboTerm="SBO:0000247" id="_CHEBI_57286" name="acetoacetyl-CoA(4-)" compartment="c" initialConcentration="2.2e-05" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57286">
@@ -312,6 +851,20 @@
                 <rdf:Bag>
                   <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H20O7P2/c1-9(2)5-4-6-10(3)7-8-16-19(14,15)17-18(11,12)13/h5,7H,4,6,8H2,1-3H3,(H,14,15)(H2,11,12,13)/p-3/b10-7+"/>
                   <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58057"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_15383" sboTerm="SBO:0000247" id="_CHEBI_15383" name="(4S)-limonene" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_15383">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H16/c1-8(2)10-6-4-9(3)5-7-10/h4,10H,1,5-7H2,2-3H3/t10-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15383"/>
                 </rdf:Bag>
               </bqbiol:is>
             </rdf:Description>
@@ -409,9 +962,22 @@
           </rdf:RDF>
         </annotation>
       </species>
+      <species metaid="_meta_Q40322" sboTerm="SBO:0000252" id="_Q40322" name="4S-limonene synthase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q40322">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q40322"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
     </listOfSpecies>
     <listOfReactions>
-      <reaction metaid="_meta_MNXR55238" sboTerm="SBO:0000176" id="_MNXR55238" name="Geranyl diphosphate synthase" reversible="false">
+      <reaction metaid="_meta_MNXR55238" sboTerm="SBO:0000176" id="_MNXR55238" reversible="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_MNXR55238">
@@ -439,6 +1005,25 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q8LKJ2"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> c </ci>
+              <ci> _Q8LKJ2 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_16584 </ci>
+              <ci> KM__CHEBI_16584 </ci>
+              <ci> _CHEBI_57623 </ci>
+              <ci> KM__CHEBI_57623 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR14942" sboTerm="SBO:0000176" id="_MNXR14942" name="Acetyl-CoA acetyltransferase/HMG-CoA reductase" reversible="true">
         <annotation>
@@ -468,6 +1053,36 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _7af6473a5b4a401aa860439f5dc05a86 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD70 </ci>
+              <ci> kcat_for </ci>
+              <ci> kcat_rev </ci>
+              <ci> _CHEBI_57287 </ci>
+              <ci> KM__CHEBI_57287 </ci>
+              <ci> _CHEBI_57540 </ci>
+              <ci> KM__CHEBI_57540 </ci>
+              <ci> _CHEBI_36464 </ci>
+              <ci> KM__CHEBI_36464 </ci>
+              <ci> _CHEBI_57945 </ci>
+              <ci> KM__CHEBI_57945 </ci>
+              <ci> _CHEBI_43074 </ci>
+              <ci> KM__CHEBI_43074 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57540" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57945" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_43074" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR69766" sboTerm="SBO:0000176" id="_MNXR69766" name="Phosphomevalonate kinase" reversible="false">
         <annotation>
@@ -495,6 +1110,25 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD52"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD52 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_58146 </ci>
+              <ci> KM__CHEBI_58146 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58146" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR341" sboTerm="SBO:0000176" id="_MNXR341" name="Acetyl-CoA acetyltransferase/HMG-CoA reductase" reversible="true">
         <annotation>
@@ -522,6 +1156,30 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _4747dcd5b07749d8b071c16cb12092dd </ci>
+              <ci> c </ci>
+              <ci> _Q9FD70 </ci>
+              <ci> kcat_for </ci>
+              <ci> kcat_rev </ci>
+              <ci> _CHEBI_57287 </ci>
+              <ci> KM__CHEBI_57287 </ci>
+              <ci> _CHEBI_57286 </ci>
+              <ci> KM__CHEBI_57286 </ci>
+              <ci> _CHEBI_57288 </ci>
+              <ci> KM__CHEBI_57288 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR69289" sboTerm="SBO:0000176" id="_MNXR69289" name="Isopentenyl-diphosphate Delta-isomerase" reversible="true">
         <annotation>
@@ -549,6 +1207,27 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q46822"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _131a1f3946bd4eda90460ea8ebc087f9 </ci>
+              <ci> c </ci>
+              <ci> _Q46822 </ci>
+              <ci> kcat_for </ci>
+              <ci> kcat_rev </ci>
+              <ci> _CHEBI_57623 </ci>
+              <ci> KM__CHEBI_57623 </ci>
+              <ci> _CHEBI_16584 </ci>
+              <ci> KM__CHEBI_16584 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR3507" sboTerm="SBO:0000176" id="_MNXR3507" name="Mevalonate kinase" reversible="false">
         <annotation>
@@ -577,6 +1256,25 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD54 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_36464 </ci>
+              <ci> KM__CHEBI_36464 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR68753" sboTerm="SBO:0000176" id="_MNXR68753" name="Diphosphomevalonate decarboxylase" reversible="false">
         <annotation>
@@ -607,6 +1305,25 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD53"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD53 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_57557 </ci>
+              <ci> KM__CHEBI_57557 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57557" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
       <reaction metaid="_meta_MNXR2982" sboTerm="SBO:0000176" id="_MNXR2982" name="Hydroxymethylglutaryl-CoA synthase" reversible="false">
         <annotation>
@@ -637,6 +1354,65 @@
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD71"/>
         </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD71 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_57288 </ci>
+              <ci> KM__CHEBI_57288 </ci>
+              <ci> _CHEBI_57286 </ci>
+              <ci> KM__CHEBI_57286 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_R02013" sboTerm="SBO:0000176" id="_R02013" name="4S-limonene synthase" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_R02013">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02013"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.3.16"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_58057" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_15383" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_33019" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q40322"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _df4c1dcb029e466aa17d7afe96270a13 </ci>
+              <ci> c </ci>
+              <ci> _Q40322 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_58057 </ci>
+              <ci> KM__CHEBI_58057 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58057" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
       </reaction>
     </listOfReactions>
   </model>
