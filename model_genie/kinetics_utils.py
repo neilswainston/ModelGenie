@@ -32,14 +32,15 @@ _IGNORED = [
     'http://identifiers.org/chebi/CHEBI:43474',  # hydrogenphosphate
 ]
 
-_FIXED = [
-    'http://identifiers.org/chebi/CHEBI:30616',  # ATP(4-)
-    'http://identifiers.org/chebi/CHEBI:456216',  # ADP(3-)
-    'http://identifiers.org/chebi/CHEBI:456215',  # AMP(2-)
-    'http://identifiers.org/chebi/CHEBI:57287',  # coenzyme A(4-)
-    'http://identifiers.org/chebi/CHEBI:57540',  # NAD(1-)
-    'http://identifiers.org/chebi/CHEBI:57945',  # NADH(2-)
-]
+# See http://www.nature.com/nchembio/journal/v5/n8/fig_tab/nchembio.186_T1.html
+_FIXED = {
+    'http://identifiers.org/chebi/CHEBI:30616': 9.6e-3,  # ATP(4-)
+    'http://identifiers.org/chebi/CHEBI:456216': 5.6e-4,  # ADP(3-)
+    'http://identifiers.org/chebi/CHEBI:456215': 2.8e-4,  # AMP(2-)
+    'http://identifiers.org/chebi/CHEBI:57287': 1.4e-3,  # coenzyme A(4-)
+    'http://identifiers.org/chebi/CHEBI:57540': 2.6e-3,  # NAD(1-)
+    'http://identifiers.org/chebi/CHEBI:57945': 8.3e-5,  # NADH(2-)
+}
 
 _FORMULA_TO_ID = {}
 
@@ -58,6 +59,7 @@ def add_kinetics(document):
             elif annotation[0] in _FIXED:
                 species.setConstant(True)
                 species.setBoundaryCondition(True)
+                species.setInitialConcentration(_FIXED.get(annotation[0], 0.0))
 
     for reaction in model.getListOfReactions():
         _add_kinetics_reaction(model, reaction, ignored)
