@@ -22,14 +22,17 @@ _SBO_TERM_DEFAULT = {model_utils.SBO_TERMS[model_utils.SIMPLE_CHEM]: 1e-4,
                      model_utils.SBO_TERMS[model_utils.KCAT_REV]: 10,
                      model_utils.SBO_TERMS[model_utils.K_M]: 1e-4}
 
-_SPECIES_TO_IGNORE = [
+_IGNORED = [
     'http://identifiers.org/chebi/CHEBI:15377',  # water
     'http://identifiers.org/chebi/CHEBI:15378',  # hydron
-    'http://identifiers.org/chebi/CHEBI:16526',  # carbon dioxide
     'http://identifiers.org/chebi/CHEBI:24636',  # proton
+    'http://identifiers.org/chebi/CHEBI:16526',  # carbon dioxide
     'http://identifiers.org/chebi/CHEBI:28938',  # ammonium
     'http://identifiers.org/chebi/CHEBI:33019',  # diphosphate(3-)
     'http://identifiers.org/chebi/CHEBI:43474',  # hydrogenphosphate
+]
+
+_FIXED = [
     'http://identifiers.org/chebi/CHEBI:30616',  # ATP(4-)
     'http://identifiers.org/chebi/CHEBI:456216',  # ADP(3-)
     'http://identifiers.org/chebi/CHEBI:456215',  # AMP(2-)
@@ -44,18 +47,23 @@ _FORMULA_TO_ID = {}
 def add_kinetics(document):
     '''Adds convenience kinetics to all reactions in the document.'''
     model = document.getModel()
+    ignored = []
 
     for species in model.getListOfSpecies():
         for annotation in model_utils.get_annotations(species):
-            if annotation[0] in _SPECIES_TO_IGNORE:
+            if annotation[0] in _IGNORED:
+                species.setConstant(True)
+                species.setBoundaryCondition(True)
+                ignored.append(species.getId())
+            elif annotation[0] in _FIXED:
                 species.setConstant(True)
                 species.setBoundaryCondition(True)
 
     for reaction in model.getListOfReactions():
-        _add_kinetics_reaction(model, reaction)
+        _add_kinetics_reaction(model, reaction, ignored)
 
 
-def _add_kinetics_reaction(model, reaction):
+def _add_kinetics_reaction(model, reaction, ignored):
     '''Adds a convenience kinetic law to a given reaction.'''
     is_reversible = reaction.isSetReversible() and reaction.getReversible()
 
@@ -64,12 +72,12 @@ def _add_kinetics_reaction(model, reaction):
                model_utils.SBO_TERMS[model_utils.ENZYME]]
 
     formula, parameters, num_react, num_prods = \
-        _get_formula(model,
-                     reaction.getListOfReactants(),
+        _get_formula(reaction.getListOfReactants(),
                      reaction.getListOfProducts()
                      if is_reversible else [],
                      model.getSpecies(enzymes[0].getSpecies())
-                     if enzymes else None)
+                     if enzymes else None,
+                     ignored)
 
     print formula
 
@@ -82,11 +90,11 @@ def _add_kinetics_reaction(model, reaction):
     _set_kinetic_law(reaction, func_def, parameters)
 
 
-def _get_formula(model, reactants, products, enzyme):
+def _get_formula(reactants, products, enzyme, ignored):
     '''Returns formula, react_terms, prod_terms
     for supplied number of reactants and products.'''
-    react_terms = _get_terms(model, reactants, 'S')
-    prod_terms = _get_terms(model, products, 'P')
+    react_terms = _get_terms(reactants, 'S', ignored)
+    prod_terms = _get_terms(products, 'P', ignored)
     irreversible = len(prod_terms) == 0
 
     react_numer_terms = model_utils.KCAT_FOR + ' * ' + \
@@ -131,11 +139,11 @@ def _get_formula(model, reactants, products, enzyme):
     return formula, params, len(react_terms), len(prod_terms)
 
 
-def _get_terms(model, participants, prefix):
+def _get_terms(participants, prefix, ignored):
     ''''Get list of tuples of (id, stoichiometry, parameter_id,
     sbo_term).'''
     valid_ppt = [ppt for ppt in participants
-                 if not model.getSpecies(ppt.getSpecies()).getConstant()]
+                 if ppt.getSpecies() not in ignored]
 
     terms = [[ppt.getSpecies(),
               ppt.getStoichiometry(),
