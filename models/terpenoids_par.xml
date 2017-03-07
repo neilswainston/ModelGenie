@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version5" level="2" version="5">
+  <model>
+    <listOfFunctionDefinitions>
+      <functionDefinition id="_d5046caeb9a946128fa915f080f07a14" name="Convenience (irreversible): 2 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KM_S2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_5438fa6499d24ce08d2b487f9728a77f" name="Convenience (irreversible): 2 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KM_S2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_39ac1c162d274a5493cee7b537555797" name="Convenience (irreversible): 1 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KM_S1 </ci>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KM_S1 </ci>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_fe2df9f313934722aadcc6deaa4b9b97" name="Convenience (reversible): 1 reactants, 1 products">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_rev </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_P1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> kcat_for </ci>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kcat_rev </ci>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> P1 </ci>
+                      <ci> KM_P1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_9a6e522ccba64410bf1ee611e96cbb48" name="Convenience (irreversible): 1 reactants">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KM_S1 </ci>
+                  </apply>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="per_sec" name="per_sec">
+        <listOfUnits>
+          <unit kind="second" exponent="-1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="M" name="M">
+        <listOfUnits>
+          <unit kind="mole"/>
+          <unit kind="litre" exponent="-1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="M_per_sec" name="M_per_sec">
+        <listOfUnits>
+          <unit kind="mole"/>
+          <unit kind="litre" exponent="-1"/>
+          <unit kind="second" exponent="-1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="c" size="1e-15"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="_meta_CHEBI_57540" sboTerm="SBO:0000247" id="_CHEBI_57540" name="NAD(1-)" compartment="c" initialConcentration="0.0026" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57540">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/76961-04-1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57540"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_16526" sboTerm="SBO:0000247" id="_CHEBI_16526" name="Carbon dioxide" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_16526">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/pubmed/23828359"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.drug/D00004"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchikey/CURLTUGMZLYLDI-UHFFFAOYSA-N"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB01967"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00011"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/CO2/c2-1-3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16526"/>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/124-38-9"/>
+                  <rdf:li rdf:resource="http://identifiers.org/umbbd.compound/c0131"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57557" sboTerm="SBO:0000247" id="_CHEBI_57557" name="(R)-5-diphosphonatomevalonate(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57557">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H14O10P2/c1-6(9,4-5(7)8)2-3-15-18(13,14)16-17(10,11)12/h9H,2-4H2,1H3,(H,7,8)(H,13,14)(H2,10,11,12)/p-4/t6-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57557"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_16584" sboTerm="SBO:0000247" id="_CHEBI_16584" name="isopentenyl diphosphate" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_16584">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/358-71-4"/>
+                  <rdf:li rdf:resource="http://identifiers.org/lipidmaps/LMPR01010008"/>
+                  <rdf:li rdf:resource="http://identifiers.org/knapsack/C00000848"/>
+                  <rdf:li rdf:resource="http://identifiers.org/drugbank/DB04714"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubmed/23543734"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00129"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h1,3-4H2,2H3,(H,9,10)(H2,6,7,8)"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16584"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57945" sboTerm="SBO:0000247" id="_CHEBI_57945" name="NADH(2-)" compartment="c" initialConcentration="8.3e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57945">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57945"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_58146" sboTerm="SBO:0000247" id="_CHEBI_58146" name="(R)-5-phosphonatomevalonate(3-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_58146">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H13O7P/c1-6(9,4-5(7)8)2-3-13-14(10,11)12/h9H,2-4H2,1H3,(H,7,8)(H2,10,11,12)/p-3/t6-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58146"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_43074" sboTerm="SBO:0000247" id="_CHEBI_43074" name="(3S)-3-hydroxy-3-methylglutaryl-CoA(5-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_43074">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C27H44N7O20P3S/c1-26(2,21(40)24(41)30-5-4-15(35)29-6-7-58-17(38)9-27(3,42)8-16(36)37)11-51-57(48,49)54-56(46,47)50-10-14-20(53-55(43,44)45)19(39)25(52-14)34-13-33-18-22(28)31-12-32-23(18)34/h12-14,19-21,25,39-40,42H,4-11H2,1-3H3,(H,29,35)(H,30,41)(H,36,37)(H,46,47)(H,48,49)(H2,28,31,32)(H2,43,44,45)/p-5/t14-,19-,20-,21+,25-,27+/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43074"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_24636" sboTerm="SBO:0000247" id="_CHEBI_24636" name="proton" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_24636">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/12408-02-5"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00080"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/p+1/i/hH"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:24636"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_33019" sboTerm="SBO:0000247" id="_CHEBI_33019" name="diphosphate(3-)" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_33019">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:33019"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_36464" sboTerm="SBO:0000247" id="_CHEBI_36464" name="(R)-mevalonate" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_36464">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00418"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C6H12O4/c1-6(10,2-3-7)4-5(8)9/h7,10H,2-4H2,1H3,(H,8,9)/p-1/t6-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:36464"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57288">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C23H38N7O17P3S/c1-12(31)51-7-6-25-14(32)4-5-26-21(35)18(34)23(2,3)9-44-50(41,42)47-49(39,40)43-8-13-17(46-48(36,37)38)16(33)22(45-13)30-11-29-15-19(24)27-10-28-20(15)30/h10-11,13,16-18,22,33-34H,4-9H2,1-3H3,(H,25,32)(H,26,35)(H,39,40)(H,41,42)(H2,24,27,28)(H2,36,37,38)/p-4/t13-,16-,17-,18+,22-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57288"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57623" sboTerm="SBO:0000247" id="_CHEBI_57623" name="prenyl diphosphate(3-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57623">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/22679-02-3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubmed/7753173"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3H,4H2,1-2H3,(H,9,10)(H2,6,7,8)/p-3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57623"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_15377" sboTerm="SBO:0000247" id="_CHEBI_15377" name="water" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_15377">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/wikipedia.en/Water"/>
+                  <rdf:li rdf:resource="http://identifiers.org/pubmed/863843"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.drug/D00001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchikey/XLYOFNOQVPJJNP-UHFFFAOYSA-N"/>
+                  <rdf:li rdf:resource="http://identifiers.org/hmdb/HMDB02111"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H2O/h1H2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15377"/>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/7732-18-5"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_30616" sboTerm="SBO:0000247" id="_CHEBI_30616" name="ATP(4-)" compartment="c" initialConcentration="0.0096" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_30616">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30616"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_43474" sboTerm="SBO:0000247" id="_CHEBI_43474" name="hydrogenphosphate" compartment="c" initialConcentration="0" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_43474">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:43474"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_456216" sboTerm="SBO:0000247" id="_CHEBI_456216" name="ADP(3-)" compartment="c" initialConcentration="0.00056" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_456216">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:456216"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57287" sboTerm="SBO:0000247" id="_CHEBI_57287" name="coenzyme A(4-)" compartment="c" initialConcentration="0.0014" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57287">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/cas/85-61-0"/>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57287"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_57286" sboTerm="SBO:0000247" id="_CHEBI_57286" name="acetoacetyl-CoA(4-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_57286">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C25H40N7O18P3S/c1-13(33)8-16(35)54-7-6-27-15(34)4-5-28-23(38)20(37)25(2,3)10-47-53(44,45)50-52(42,43)46-9-14-19(49-51(39,40)41)18(36)24(48-14)32-12-31-17-21(26)29-11-30-22(17)32/h11-12,14,18-20,24,36-37H,4-10H2,1-3H3,(H,27,34)(H,28,38)(H,42,43)(H,44,45)(H2,26,29,30)(H2,39,40,41)/p-4/t14-,18-,19-,20+,24-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:57286"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_58057" sboTerm="SBO:0000247" id="_CHEBI_58057" name="geranyl diphosphate(3-)" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_58057">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H20O7P2/c1-9(2)5-4-6-10(3)7-8-16-19(14,15)17-18(11,12)13/h5,7H,4,6,8H2,1-3H3,(H,14,15)(H2,11,12,13)/p-3/b10-7+"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:58057"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_CHEBI_15383" sboTerm="SBO:0000247" id="_CHEBI_15383" name="(4S)-limonene" compartment="c" initialConcentration="0" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_CHEBI_15383">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/inchi/InChI=1S/C10H16/c1-8(2)10-6-4-9(3)5-7-10/h4,10H,1,5-7H2,2-3H3/t10-/m1/s1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15383"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q8LKJ2" sboTerm="SBO:0000252" id="_Q8LKJ2" name="Geranyl diphosphate synthase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q8LKJ2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q8LKJ2"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q9FD70" sboTerm="SBO:0000252" id="_Q9FD70" name="Acetyl-CoA acetyltransferase/HMG-CoA reductase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q9FD70">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9FD70"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q9FD52" sboTerm="SBO:0000252" id="_Q9FD52" name="Phosphomevalonate kinase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q9FD52">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9FD52"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q46822" sboTerm="SBO:0000252" id="_Q46822" name="Isopentenyl-diphosphate Delta-isomerase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q46822">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q46822"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q9FD54" sboTerm="SBO:0000252" id="_Q9FD54" name="Mevalonate kinase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q9FD54">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9FD54"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q9FD53" sboTerm="SBO:0000252" id="_Q9FD53" name="Diphosphomevalonate decarboxylase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q9FD53">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9FD53"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q9FD71" sboTerm="SBO:0000252" id="_Q9FD71" name="Hydroxymethylglutaryl-CoA synthase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q9FD71">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q9FD71"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="_meta_Q40322" sboTerm="SBO:0000252" id="_Q40322" name="4S-limonene synthase" compartment="c" initialConcentration="1e-05" boundaryCondition="true" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_Q40322">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q40322"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction metaid="_meta_MNXR55238" sboTerm="SBO:0000176" id="_MNXR55238" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR55238">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01658"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.5.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/22411"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/GPPSh"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/R-XTR-191322"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_16584" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57623" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_33019" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_24636" stoichiometry="3"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_58057" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q8LKJ2"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _d5046caeb9a946128fa915f080f07a14 </ci>
+              <ci> c </ci>
+              <ci> _Q8LKJ2 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_16584 </ci>
+              <ci> KM__CHEBI_16584 </ci>
+              <ci> _CHEBI_57623 </ci>
+              <ci> KM__CHEBI_57623 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR14942" sboTerm="SBO:0000176" id="_MNXR14942" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR14942">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02081"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.88"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/14836"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57945" stoichiometry="2"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_43074" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57287" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57540" stoichiometry="2"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_36464" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _5438fa6499d24ce08d2b487f9728a77f </ci>
+              <ci> c </ci>
+              <ci> _Q9FD70 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_57945 </ci>
+              <ci> KM__CHEBI_57945 </ci>
+              <ci> _CHEBI_43074 </ci>
+              <ci> KM__CHEBI_43074 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57945" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_43074" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR69766" sboTerm="SBO:0000176" id="_MNXR69766" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR69766">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R03245"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.4.2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/16344"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/PMEVKx"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_30616" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_58146" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_456216" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57557" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD52"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _d5046caeb9a946128fa915f080f07a14 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD52 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_58146 </ci>
+              <ci> KM__CHEBI_58146 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58146" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR341" sboTerm="SBO:0000176" id="_MNXR341" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR341">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00238"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.3.1.9"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/21039"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/KAT1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/R-XTR-74181"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57288" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57287" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57286" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD70"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _39ac1c162d274a5493cee7b537555797 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD70 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_57288 </ci>
+              <ci> KM__CHEBI_57288 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR69289" sboTerm="SBO:0000176" id="_MNXR69289" reversible="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR69289">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01123"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/5.3.3.2"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/23287"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/IPDDIx"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/R-XTR-191382"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="3"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57623" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_16584" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q46822"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _fe2df9f313934722aadcc6deaa4b9b97 </ci>
+              <ci> c </ci>
+              <ci> _Q46822 </ci>
+              <ci> kcat_for </ci>
+              <ci> kcat_rev </ci>
+              <ci> _CHEBI_57623 </ci>
+              <ci> KM__CHEBI_57623 </ci>
+              <ci> _CHEBI_16584 </ci>
+              <ci> KM__CHEBI_16584 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR3507" sboTerm="SBO:0000176" id="_MNXR3507" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR3507">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02245"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.36"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/17068"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/MEVK1x"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_30616" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_36464" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_456216" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_58146" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _d5046caeb9a946128fa915f080f07a14 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD54 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_36464 </ci>
+              <ci> KM__CHEBI_36464 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR68753" sboTerm="SBO:0000176" id="_MNXR68753" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR68753">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01121"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.1.33"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/23735"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/DPMVDx"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_24636" stoichiometry="3"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_30616" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57557" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_43474" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_16526" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_456216" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_16584" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD53"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _d5046caeb9a946128fa915f080f07a14 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD53 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_30616 </ci>
+              <ci> KM__CHEBI_30616 </ci>
+              <ci> _CHEBI_57557 </ci>
+              <ci> KM__CHEBI_57557 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57557" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_MNXR2982" sboTerm="SBO:0000176" id="_MNXR2982" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_MNXR2982">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01978"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.3.3.10"/>
+                  <rdf:li rdf:resource="http://identifiers.org/rhea/10191"/>
+                  <rdf:li rdf:resource="http://identifiers.org/bigg.reaction/MHGS"/>
+                  <rdf:li rdf:resource="http://identifiers.org/reactome/R-XTR-191323"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_15377" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57288" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_57286" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_24636" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_57287" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_43074" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD71"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _d5046caeb9a946128fa915f080f07a14 </ci>
+              <ci> c </ci>
+              <ci> _Q9FD71 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_57288 </ci>
+              <ci> KM__CHEBI_57288 </ci>
+              <ci> _CHEBI_57286 </ci>
+              <ci> KM__CHEBI_57286 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="_meta_R02013" sboTerm="SBO:0000176" id="_R02013" reversible="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
+            <rdf:Description rdf:about="#_meta_R02013">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02013"/>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.3.16"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_58057" stoichiometry="1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" species="_CHEBI_15383" stoichiometry="1"/>
+          <speciesReference sboTerm="SBO:0000010" species="_CHEBI_33019" stoichiometry="1"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q40322"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <ci> _9a6e522ccba64410bf1ee611e96cbb48 </ci>
+              <ci> c </ci>
+              <ci> _Q40322 </ci>
+              <ci> kcat_for </ci>
+              <ci> _CHEBI_58057 </ci>
+              <ci> KM__CHEBI_58057 </ci>
+            </apply>
+          </math>
+          <listOfParameters>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58057" value="0.0001" units="M"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
