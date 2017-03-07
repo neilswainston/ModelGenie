@@ -59,7 +59,7 @@ def add_kinetics(document):
             elif annotation[0] in _FIXED:
                 species.setConstant(True)
                 species.setBoundaryCondition(True)
-                species.setInitialConcentration(_FIXED.get(annotation[0], 0.0))
+                species.setInitialConcentration(_FIXED[annotation[0]])
 
     for reaction in model.getListOfReactions():
         _add_kinetics_reaction(model, reaction, ignored)
