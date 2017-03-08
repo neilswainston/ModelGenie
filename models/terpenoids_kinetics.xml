@@ -1019,9 +1019,9 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="8.5e-2" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="1.2e-5" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="2.2e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1074,13 +1074,13 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57540" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57945" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_43074" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="17" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="9.9" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="7.3e-5" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57540" value="3.1e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="4.0e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57945" value="1.7e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_43074" value="1.8e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1125,8 +1125,8 @@
           </math>
           <listOfParameters>
             <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58146" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="2.3e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58146" value="1.1e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1173,11 +1173,11 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="1.3e2" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="2.9e1" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57287" value="1.1e-5" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="2.5e-5" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="3.3e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1222,10 +1222,10 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="7.5e-3" units="per_sec"/>
+            <parameter sboTerm="SBO:0000321" id="kcat_rev" value="6.9e-1" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57623" value="1.7e-5" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_16584" value="1.2e-5" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1270,9 +1270,9 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="12" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="8.8e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="1.1e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1368,9 +1368,9 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="2.3e-2" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57288" value="3e-6" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57286" value="1.2e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1409,8 +1409,8 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58057" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="3.7e-2" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_58057" value="4.3e-6" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
