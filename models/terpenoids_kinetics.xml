@@ -721,7 +721,7 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0.00061" boundaryCondition="false" constant="false">
+      <species metaid="_meta_CHEBI_57288" sboTerm="SBO:0000247" id="_CHEBI_57288" name="acetyl-CoA(4-)" compartment="c" initialConcentration="0.00061" boundaryCondition="true" constant="true">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
             <rdf:Description rdf:about="#_meta_CHEBI_57288">
