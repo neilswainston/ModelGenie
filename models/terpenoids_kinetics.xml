@@ -1319,9 +1319,9 @@
             </apply>
           </math>
           <listOfParameters>
-            <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
-            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57557" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000320" id="kcat_for" value="1.2" units="per_sec"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="7.5e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KM__CHEBI_57557" value="1.0e-4" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
