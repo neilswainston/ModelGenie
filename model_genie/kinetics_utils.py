@@ -73,12 +73,17 @@ def _add_kinetics_reaction(model, reaction, ignored):
                if modifier.getSBOTerm() ==
                model_utils.SBO_TERMS[model_utils.ENZYME]]
 
-    formula, parameters, num_react, num_prods = \
+    inhibitors = [modifier for modifier in reaction.getListOfModifiers()
+                  if modifier.getSBOTerm() ==
+                  model_utils.SBO_TERMS[model_utils.INHIBITOR]]
+
+    formula, parameters, num_react, num_prods, num_inhibs = \
         _get_formula(reaction.getListOfReactants(),
                      reaction.getListOfProducts()
                      if is_reversible else [],
                      model.getSpecies(enzymes[0].getSpecies())
-                     if enzymes else None,
+                     if len(enzymes) > 0 else None,
+                     inhibitors,
                      ignored)
 
     print formula
@@ -87,34 +92,44 @@ def _add_kinetics_reaction(model, reaction, ignored):
                              formula,
                              [parameter[0] for parameter in parameters],
                              num_react,
-                             num_prods)
+                             num_prods,
+                             num_inhibs)
 
     _set_kinetic_law(reaction, func_def, parameters)
 
 
-def _get_formula(reactants, products, enzyme, ignored):
+def _get_formula(reactants, products, enzyme, inhibitors, ignored):
     '''Returns formula, react_terms, prod_terms
     for supplied number of reactants and products.'''
     react_terms = _get_terms(reactants, 'S', ignored)
     prod_terms = _get_terms(products, 'P', ignored)
-    irreversible = len(prod_terms) == 0
+    inhib_terms = _get_terms(inhibitors, 'I', ignored, 'KI')
 
     react_numer_terms = model_utils.KCAT_FOR + ' * ' + \
         _get_numer_terms(react_terms)
     react_denom_terms = _get_denom_terms(react_terms)
 
-    prod_numer_terms = '' if irreversible \
+    prod_numer_terms = '' if len(prod_terms) == 0 \
         else ' - ( ' + model_utils.KCAT_REV + ' * ' + \
         _get_numer_terms(prod_terms) + ' )'
-    prod_denom_terms = '' if irreversible \
+    prod_denom_terms = '' if len(prod_terms) == 0 \
         else ' + ( ' + _get_denom_terms(prod_terms) + ' ) - 1'
 
-    numer = '( ' + react_numer_terms + prod_numer_terms + ' )'
-    denom = '( ' + react_denom_terms + prod_denom_terms + ' )'
-
     formula = model_utils.VOLUME + ' * ' + \
-        model_utils.ENZYME_CONC + ' * ' + numer + ' / ' + denom
+        model_utils.ENZYME_CONC + ' * ' + \
+        _get_inhib_term(inhib_terms) + ' * ' + \
+        '( ' + react_numer_terms + prod_numer_terms + ' ) / ( ' + \
+        react_denom_terms + prod_denom_terms + ' )'
 
+    params = _add_parameters(react_terms, prod_terms, inhib_terms, enzyme,
+                             len(prod_terms) == 0)
+
+    return formula, params, len(react_terms), len(prod_terms), len(inhib_terms)
+
+
+def _add_parameters(react_terms, prod_terms, inhib_terms, enzyme,
+                    irreversible):
+    '''Adds parameters.'''
     params = []
     params.append((model_utils.VOLUME,
                    model_utils.SBO_TERMS[model_utils.VOLUME],
@@ -137,20 +152,22 @@ def _get_formula(reactants, products, enzyme, ignored):
 
     params.extend(_get_parameters(react_terms))
     params.extend(_get_parameters(prod_terms))
+    params.extend(_get_parameters(inhib_terms, 'KI'))
 
-    return formula, params, len(react_terms), len(prod_terms)
+    return params
 
 
-def _get_terms(participants, prefix, ignored):
+def _get_terms(participants, prefix, ignored, param_prefix='KM'):
     ''''Get list of tuples of (id, stoichiometry, parameter_id,
     sbo_term).'''
     valid_ppt = [ppt for ppt in participants
                  if ppt.getSpecies() not in ignored]
 
     terms = [[ppt.getSpecies(),
-              ppt.getStoichiometry(),
+              ppt.getStoichiometry()
+              if isinstance(ppt, libsbml.SpeciesReference) else float('NaN'),
               (prefix + str(i + 1), model_utils.SBO_TERMS[model_utils.CONC]),
-              ('KM_' + prefix + str(i + 1),
+              (param_prefix + '_' + prefix + str(i + 1),
                model_utils.SBO_TERMS[model_utils.K_M])]
              for i, ppt in enumerate(valid_ppt)]
 
@@ -175,7 +192,19 @@ def _get_denom_terms(terms):
     return '( ' + ' ) * ( '.join(lst) + ' )'
 
 
-def _get_func_def(model, formula, parameters, num_reacts, num_prods):
+def _get_inhib_term(terms):
+    '''Returns inhibitor term in the form
+    (KI_I1/(KI_I1 + I1)) * (KI_I2/(KI_I2 + I2)).'''
+    if len(terms) == 0:
+        return '1'
+
+    return ' * '.join(['(' + term[3][0] + ' / ' +
+                       '(' + term[3][0] + ' + ' + term[2][0] + '))'
+                       for term in terms])
+
+
+def _get_func_def(model, formula, parameters, num_reacts, num_prods,
+                  num_inhibs):
     '''Gets existing or creates new functionDefinition from given
     parameters.'''
     if formula in _FORMULA_TO_ID:
@@ -184,17 +213,18 @@ def _get_func_def(model, formula, parameters, num_reacts, num_prods):
     else:
         function_definition = model.createFunctionDefinition()
         function_definition.setId(_get_unique_id())
-        function_definition.setName(_get_func_name(num_reacts, num_prods))
+        function_definition.setName(_get_func_name(num_reacts, num_prods,
+                                                   num_inhibs))
         function_definition.setMath(_get_math(formula, parameters))
         _FORMULA_TO_ID[formula] = function_definition.getId()
 
     return function_definition
 
 
-def _get_parameters(terms):
+def _get_parameters(terms, param_prefix='KM'):
     '''Gets parameters derived from terms.'''
     lst = [[(term[2][0], term[2][1], term[0], None),
-            (term[3][0], term[3][1], 'KM_' + term[0], term[0])]
+            (term[3][0], term[3][1], param_prefix + '_' + term[0], term[0])]
            for term in terms]
     return [item for sublist in lst for item in sublist]
 
@@ -229,16 +259,19 @@ def _set_kinetic_law(reaction, function_definition, parameters):
     return kinetic_law
 
 
-def _get_func_name(num_reactants, num_products):
-    '''Returns a function name based on the number of reactants and
-    products.'''
+def _get_func_name(num_reactants, num_products, num_inhibs):
+    '''Returns a function name based on the number of reactants,
+    products and inhibitors.'''
     is_reversible = num_products > 0
     reversible = 'reversible' if is_reversible else 'irreversible'
     name = 'Convenience (' + reversible + '): ' + \
         str(num_reactants) + ' reactants'
 
-    if is_reversible:
+    if num_products > 0:
         name += ', ' + str(num_products) + ' products'
+
+    if num_inhibs > 0:
+        name += ', ' + str(num_inhibs) + ' inhibitors'
 
     return name
 

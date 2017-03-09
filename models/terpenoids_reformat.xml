@@ -603,6 +603,7 @@
         </listOfProducts>
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
+          <modifierSpeciesReference sboTerm="SBO:0000020" species="_CHEBI_58057"/>
         </listOfModifiers>
       </reaction>
       <reaction metaid="_meta_MNXR68753" sboTerm="SBO:0000176" id="_MNXR68753" name="Diphosphomevalonate decarboxylase" reversible="false">

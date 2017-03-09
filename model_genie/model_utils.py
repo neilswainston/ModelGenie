@@ -35,6 +35,7 @@ KEQ = 'KEQ'
 COMPARTMENT = 'COMPARTMENT'
 ENZYME = 'ENZYME'
 VOLUME = 'volume'
+INHIBITOR = 'inhibitor'
 ENZYME_CONC = 'Et'
 
 SBO_TERMS = {KCAT: 25,
@@ -52,6 +53,7 @@ SBO_TERMS = {KCAT: 25,
              KEQ: 281,
              COMPARTMENT: 290,
              ENZYME: 460,
+             INHIBITOR: 20,
              VOLUME: 468}
 
 

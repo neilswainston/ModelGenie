@@ -2,7 +2,7 @@
 <sbml xmlns="http://www.sbml.org/sbml/level2/version5" level="2" version="5">
   <model>
     <listOfFunctionDefinitions>
-      <functionDefinition id="_cc005897d2ef4df9932a30ee0b9e1ab6" name="Convenience (irreversible): 2 reactants">
+      <functionDefinition id="_f40c0ae629f9447bbce8b64c31bd8a1f" name="Convenience (irreversible): 2 reactants">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -32,6 +32,7 @@
                 <times/>
                 <ci> volume </ci>
                 <ci> Et </ci>
+                <cn type="integer"> 1 </cn>
                 <ci> kcat_for </ci>
                 <apply>
                   <divide/>
@@ -77,7 +78,7 @@
           </lambda>
         </math>
       </functionDefinition>
-      <functionDefinition id="_7af6473a5b4a401aa860439f5dc05a86" name="Convenience (reversible): 3 reactants, 2 products">
+      <functionDefinition id="_22d4e71117d6499b9c9553c884e356c9" name="Convenience (reversible): 3 reactants, 2 products">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -128,6 +129,7 @@
                 <times/>
                 <ci> volume </ci>
                 <ci> Et </ci>
+                <cn type="integer"> 1 </cn>
                 <apply>
                   <minus/>
                   <apply>
@@ -275,7 +277,7 @@
           </lambda>
         </math>
       </functionDefinition>
-      <functionDefinition id="_4747dcd5b07749d8b071c16cb12092dd" name="Convenience (reversible): 2 reactants, 1 products">
+      <functionDefinition id="_7889997206864042bcd01f7ee1ed88f3" name="Convenience (reversible): 2 reactants, 1 products">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -314,6 +316,7 @@
                 <times/>
                 <ci> volume </ci>
                 <ci> Et </ci>
+                <cn type="integer"> 1 </cn>
                 <apply>
                   <minus/>
                   <apply>
@@ -405,7 +408,7 @@
           </lambda>
         </math>
       </functionDefinition>
-      <functionDefinition id="_131a1f3946bd4eda90460ea8ebc087f9" name="Convenience (reversible): 1 reactants, 1 products">
+      <functionDefinition id="_2392240201404ad2aa1739dc34bf8b71" name="Convenience (reversible): 1 reactants, 1 products">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -438,6 +441,7 @@
                 <times/>
                 <ci> volume </ci>
                 <ci> Et </ci>
+                <cn type="integer"> 1 </cn>
                 <apply>
                   <minus/>
                   <apply>
@@ -491,7 +495,97 @@
           </lambda>
         </math>
       </functionDefinition>
-      <functionDefinition id="_df4c1dcb029e466aa17d7afe96270a13" name="Convenience (irreversible): 1 reactants">
+      <functionDefinition id="_a35ee319873f49f0a072d1b33ae6f340" name="Convenience (irreversible): 2 reactants, 1 inhibitors">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> I1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KI_I1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <divide/>
+                  <ci> KI_I1 </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KI_I1 </ci>
+                    <ci> I1 </ci>
+                  </apply>
+                </apply>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KM_S2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="_6f0dce1a6b7a4d98bc745bfd170eef18" name="Convenience (irreversible): 1 reactants">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
             <bvar>
@@ -515,6 +609,7 @@
                 <times/>
                 <ci> volume </ci>
                 <ci> Et </ci>
+                <cn type="integer"> 1 </cn>
                 <ci> kcat_for </ci>
                 <apply>
                   <divide/>
@@ -1008,7 +1103,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _f40c0ae629f9447bbce8b64c31bd8a1f </ci>
               <ci> c </ci>
               <ci> _Q8LKJ2 </ci>
               <ci> kcat_for </ci>
@@ -1056,7 +1151,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _7af6473a5b4a401aa860439f5dc05a86 </ci>
+              <ci> _22d4e71117d6499b9c9553c884e356c9 </ci>
               <ci> c </ci>
               <ci> _Q9FD70 </ci>
               <ci> kcat_for </ci>
@@ -1113,7 +1208,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _f40c0ae629f9447bbce8b64c31bd8a1f </ci>
               <ci> c </ci>
               <ci> _Q9FD52 </ci>
               <ci> kcat_for </ci>
@@ -1159,7 +1254,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _4747dcd5b07749d8b071c16cb12092dd </ci>
+              <ci> _7889997206864042bcd01f7ee1ed88f3 </ci>
               <ci> c </ci>
               <ci> _Q9FD70 </ci>
               <ci> kcat_for </ci>
@@ -1210,7 +1305,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _131a1f3946bd4eda90460ea8ebc087f9 </ci>
+              <ci> _2392240201404ad2aa1739dc34bf8b71 </ci>
               <ci> c </ci>
               <ci> _Q46822 </ci>
               <ci> kcat_for </ci>
@@ -1255,11 +1350,12 @@
         </listOfProducts>
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
+          <modifierSpeciesReference sboTerm="SBO:0000020" species="_CHEBI_58057"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _a35ee319873f49f0a072d1b33ae6f340 </ci>
               <ci> c </ci>
               <ci> _Q9FD54 </ci>
               <ci> kcat_for </ci>
@@ -1267,12 +1363,15 @@
               <ci> KM__CHEBI_30616 </ci>
               <ci> _CHEBI_36464 </ci>
               <ci> KM__CHEBI_36464 </ci>
+              <ci> _CHEBI_58057 </ci>
+              <ci> KI__CHEBI_58057 </ci>
             </apply>
           </math>
           <listOfParameters>
             <parameter sboTerm="SBO:0000320" id="kcat_for" value="10" units="per_sec"/>
             <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="0.0001" units="M"/>
             <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="0.0001" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KI__CHEBI_58057" value="0.0001" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
@@ -1308,7 +1407,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _f40c0ae629f9447bbce8b64c31bd8a1f </ci>
               <ci> c </ci>
               <ci> _Q9FD53 </ci>
               <ci> kcat_for </ci>
@@ -1357,7 +1456,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _f40c0ae629f9447bbce8b64c31bd8a1f </ci>
               <ci> c </ci>
               <ci> _Q9FD71 </ci>
               <ci> kcat_for </ci>
@@ -1400,7 +1499,7 @@
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _df4c1dcb029e466aa17d7afe96270a13 </ci>
+              <ci> _6f0dce1a6b7a4d98bc745bfd170eef18 </ci>
               <ci> c </ci>
               <ci> _Q40322 </ci>
               <ci> kcat_for </ci>

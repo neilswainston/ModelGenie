@@ -491,6 +491,96 @@
           </lambda>
         </math>
       </functionDefinition>
+      <functionDefinition id="_a35ee319873f49f0a072d1b33ae6f340" name="Convenience (irreversible): 2 reactants, 1 inhibitors">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <lambda>
+            <bvar>
+              <ci> volume </ci>
+            </bvar>
+            <bvar>
+              <ci> Et </ci>
+            </bvar>
+            <bvar>
+              <ci> kcat_for </ci>
+            </bvar>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KM_S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> I1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KI_I1 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> volume </ci>
+                <ci> Et </ci>
+                <apply>
+                  <divide/>
+                  <ci> KI_I1 </ci>
+                  <apply>
+                    <plus/>
+                    <ci> KI_I1 </ci>
+                    <ci> I1 </ci>
+                  </apply>
+                </apply>
+                <ci> kcat_for </ci>
+                <apply>
+                  <divide/>
+                  <ci> S1 </ci>
+                  <ci> KM_S1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KM_S2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S1 </ci>
+                      <ci> KM_S1 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> S2 </ci>
+                      <ci> KM_S2 </ci>
+                    </apply>
+                    <cn type="integer"> 1 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
       <functionDefinition id="_df4c1dcb029e466aa17d7afe96270a13" name="Convenience (irreversible): 1 reactants">
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <lambda>
@@ -1255,11 +1345,12 @@
         </listOfProducts>
         <listOfModifiers>
           <modifierSpeciesReference sboTerm="SBO:0000460" species="_Q9FD54"/>
+          <modifierSpeciesReference sboTerm="SBO:0000020" species="_CHEBI_58057"/>
         </listOfModifiers>
         <kineticLaw>
           <math xmlns="http://www.w3.org/1998/Math/MathML">
             <apply>
-              <ci> _cc005897d2ef4df9932a30ee0b9e1ab6 </ci>
+              <ci> _a35ee319873f49f0a072d1b33ae6f340 </ci>
               <ci> c </ci>
               <ci> _Q9FD54 </ci>
               <ci> kcat_for </ci>
@@ -1267,12 +1358,15 @@
               <ci> KM__CHEBI_30616 </ci>
               <ci> _CHEBI_36464 </ci>
               <ci> KM__CHEBI_36464 </ci>
+              <ci> _CHEBI_58057 </ci>
+              <ci> KI__CHEBI_58057 </ci>
             </apply>
           </math>
           <listOfParameters>
             <parameter sboTerm="SBO:0000320" id="kcat_for" value="12" units="per_sec"/>
             <parameter sboTerm="SBO:0000027" id="KM__CHEBI_30616" value="8.8e-4" units="M"/>
             <parameter sboTerm="SBO:0000027" id="KM__CHEBI_36464" value="1.1e-4" units="M"/>
+            <parameter sboTerm="SBO:0000027" id="KI__CHEBI_58057" value="2.8e-5" units="M"/>
           </listOfParameters>
         </kineticLaw>
       </reaction>
