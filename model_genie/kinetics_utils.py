@@ -91,9 +91,9 @@ def _add_kinetics_reaction(model, reaction, ignored):
     func_def = _get_func_def(model,
                              formula,
                              [parameter[0] for parameter in parameters],
-                             num_react,
-                             num_prods,
-                             num_inhibs)
+                             {'reactants': num_react,
+                              'products': num_prods,
+                              'inhibitors': num_inhibs})
 
     _set_kinetic_law(reaction, func_def, parameters)
 
@@ -203,8 +203,7 @@ def _get_inhib_term(terms):
                        for term in terms])
 
 
-def _get_func_def(model, formula, parameters, num_reacts, num_prods,
-                  num_inhibs):
+def _get_func_def(model, formula, parameters, num_components):
     '''Gets existing or creates new functionDefinition from given
     parameters.'''
     if formula in _FORMULA_TO_ID:
@@ -213,8 +212,7 @@ def _get_func_def(model, formula, parameters, num_reacts, num_prods,
     else:
         function_definition = model.createFunctionDefinition()
         function_definition.setId(_get_unique_id())
-        function_definition.setName(_get_func_name(num_reacts, num_prods,
-                                                   num_inhibs))
+        function_definition.setName(_get_func_name(num_components))
         function_definition.setMath(_get_math(formula, parameters))
         _FORMULA_TO_ID[formula] = function_definition.getId()
 
@@ -259,19 +257,19 @@ def _set_kinetic_law(reaction, function_definition, parameters):
     return kinetic_law
 
 
-def _get_func_name(num_reactants, num_products, num_inhibs):
+def _get_func_name(num_components):
     '''Returns a function name based on the number of reactants,
     products and inhibitors.'''
-    is_reversible = num_products > 0
+    is_reversible = num_components['products'] > 0
     reversible = 'reversible' if is_reversible else 'irreversible'
     name = 'Convenience (' + reversible + '): ' + \
-        str(num_reactants) + ' reactants'
+        str(num_components['reactants']) + ' reactants'
 
-    if num_products > 0:
-        name += ', ' + str(num_products) + ' products'
+    if is_reversible:
+        name += ', ' + str(num_components['products']) + ' products'
 
-    if num_inhibs > 0:
-        name += ', ' + str(num_inhibs) + ' inhibitors'
+    if num_components['inhibitors'] > 0:
+        name += ', ' + str(num_components['inhibitors']) + ' inhibitors'
 
     return name
 
