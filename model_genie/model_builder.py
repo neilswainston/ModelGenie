@@ -63,7 +63,7 @@ def _get_reaction(reac_id):
 
 def _parse(data, nodes, rels, flag):
     '''Parses data.'''
-    if len(data['errors']) > 0:
+    if not data['errors']:
         raise ValueError(str(data['errors']))
 
     columns = data['results'][0]['columns']

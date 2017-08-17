@@ -198,7 +198,7 @@ def add_modifier(model, react_id, uniprot_id):
 
         names = uniprot_vals[uniprot_id].get('Protein names', [])
 
-        if len(names) > 0:
+        if names:
             data['name'] = names[0]
 
         spec = add_species(model, cid, data, sbo=SBO_TERMS[PROTEIN],

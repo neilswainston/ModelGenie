@@ -82,7 +82,7 @@ def _add_kinetics_reaction(model, reaction, ignored):
                      reaction.getListOfProducts()
                      if is_reversible else [],
                      model.getSpecies(enzymes[0].getSpecies())
-                     if len(enzymes) > 0 else None,
+                     if enzymes else None,
                      inhibitors,
                      ignored)
 
@@ -109,10 +109,10 @@ def _get_formula(reactants, products, enzyme, inhibitors, ignored):
         _get_numer_terms(react_terms)
     react_denom_terms = _get_denom_terms(react_terms)
 
-    prod_numer_terms = '' if len(prod_terms) == 0 \
+    prod_numer_terms = '' if not prod_terms \
         else ' - ( ' + model_utils.KCAT_REV + ' * ' + \
         _get_numer_terms(prod_terms) + ' )'
-    prod_denom_terms = '' if len(prod_terms) == 0 \
+    prod_denom_terms = '' if not prod_terms \
         else ' + ( ' + _get_denom_terms(prod_terms) + ' ) - 1'
 
     formula = model_utils.VOLUME + ' * ' + \
@@ -195,7 +195,7 @@ def _get_denom_terms(terms):
 def _get_inhib_term(terms):
     '''Returns inhibitor term in the form
     (KI_I1/(KI_I1 + I1)) * (KI_I2/(KI_I2 + I2)).'''
-    if len(terms) == 0:
+    if not terms:
         return '1'
 
     return ' * '.join(['(' + term[3][0] + ' / ' +
