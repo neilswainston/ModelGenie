@@ -10,8 +10,8 @@ To view a copy of this license, visit <http://opensource.org/licenses/MIT/>.
 from _collections import defaultdict
 import sys
 
-from synbiochem import biochem4j
 import libsbml
+from synbiochem import biochem4j
 
 from model_genie import model_utils
 
@@ -53,9 +53,10 @@ def get_document(params):
 
 def _get_reaction(reac_id):
     '''Gets a reaction.'''
-    qry = 'MATCH (r:Reaction {id: {reac_id}})-[rel]-(c:Chemical) ' + \
+    qry = 'MATCH (r:Reaction {`kegg.reaction`: {reac_id}})-[rel]-(c:Chemical) ' + \
         'RETURN r, rel, c'
 
+    # MATCH (r:Reaction {`kegg.reaction`:'R10249'}) RETURN r
     parameters = {'reac_id': reac_id}
 
     return biochem4j.run_query(qry, parameters)
@@ -63,7 +64,7 @@ def _get_reaction(reac_id):
 
 def _parse(data, nodes, rels, flag):
     '''Parses data.'''
-    if not data['errors']:
+    if data['errors']:
         raise ValueError(str(data['errors']))
 
     columns = data['results'][0]['columns']
